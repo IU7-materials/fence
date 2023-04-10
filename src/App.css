@@ -1,0 +1,118 @@
+ 
+  .center {
+    top: 50%; /* Отступ в процентах от верхнего края окна */
+    left: 50%; /* Отступ в процентах от левого края окна */
+    width: 450px; /* Ширина блока */
+    height: 450px; /* Высота блока */
+    position: absolute; /* Абсолютное позиционирование блока */
+    margin-top: -225px; /* Отрицательный отступ от верхнего края страницы, должен равняться половине высоты блока со знаком минус */
+    margin-left: -225px; /* Отрицательный отступ от левого края страницы, должен равняться половине высоты блока со знаком минус */
+  }
+  
+  /*Класс для кнопки "Рассчитать стоимость"*/
+  .calculate-button {
+    background-color: #b1c251;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Отступ сверху */
+  }
+  
+  .calculate-button:hover {
+    background-color: #74802d;
+  }
+  
+  /*Заголовок первой страницы "Пройдите тест"*/
+  .test-text {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 22.5px;
+  }
+  
+  /*Для "Опыт работы 15+ лет"*/
+  .experience-text {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13.5px;
+  }
+
+   /*Контейнер для изображения и текста с кнопкой*/
+  .modal-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .modal-image {
+    flex: 0.6;
+    padding-left: 20px;
+  }
+  
+  .modal-text {
+    flex: 0.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Для мобильных устройств или узкой страницы*/
+@media (max-width: 768px) {
+    .modal-content {
+      flex-direction: column;
+    }
+  
+    .modal-image {
+      height: 25%;
+    }
+  
+    .modal-text {
+      height: 30%;
+    }
+  }
+
+  /*Эффект открытия страницы в отдельном окне*/
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-window {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 70%; /* Максимальная ширина модального окна */
+    max-height: 90%; /* Максимальная высота модального окна */
+    overflow: auto; /* При необходимости добавляет полосу прокрутки */
+  }
+
+  /*Хедер*/
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+  
+  .header-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .header-text {
+    font-size: 13,5px;
+    font-family: Helvetica, sans-serif;
+  }
