@@ -18,9 +18,21 @@ export const questions = [
           imageUrl: 'https://hgwipn3sa-res.cloudinary.com/image/upload/w_480,f_auto,q_auto,g_auto,c_fill,h_303,dpr_2/wgnad8wisglkuyts5uwt.jpg',
         },
         {
+            title: 'Древесно-полимерный композит (ДПК)',
+            imageUrl: 'https://hgwipn3sa-res.cloudinary.com/image/upload/w_480,f_auto,q_auto,g_auto,c_fill,h_303,dpr_2/sdcx9dfciklkxorufnh9.jpg',
+        },
+        {
           title: 'Евроштакетник',
           imageUrl: 'https://hgwipn3sa-res.cloudinary.com/image/upload/w_480,f_auto,q_auto,g_auto,c_fill,h_303,dpr_2/rwq0prrsmnsvvgzaz3tl.jpg',
         },
+        {
+            title: 'Сварная металлическая секция',
+            imageUrl: 'https://hgwipn3sa-res.cloudinary.com/image/upload/w_480,f_auto,q_auto,g_auto,c_fill,h_303,dpr_2/bqkc3rmj5qeiawwxcnpz.jpg',
+          },
+          {
+            title: 'Доска',
+            imageUrl: 'https://hgwipn3sa-res.cloudinary.com/image/upload/w_480,f_auto,q_auto,g_auto,c_fill,h_303,dpr_2/obya7r1fs2kvf0vjq3eu.jpg',
+          },
       ],
     },
     {

@@ -116,3 +116,57 @@
     font-size: 13,5px;
     font-family: Helvetica, sans-serif;
   }
+
+  /* Стиль для блока опций с картинкой и текстом */
+.option-item {
+    width: calc(100% / 3 - 10px);
+    height: 150px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  /* Стиль для блока опций с картинкой и текстом на узких экранах */
+  @media (max-width: 768px) {
+    .option-item {
+      width: calc(100% / 2 - 10px);
+    }
+  }
+  
+  /* Стиль для контейнера с изображением и текстом внутри блока опций */
+  .option-item-container {
+    width: 200px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Стиль для изображений опций */
+  .option-item img {
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+  }
+  
+  /* Стиль для текста опций */
+  .option-item-title {
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .options-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+  

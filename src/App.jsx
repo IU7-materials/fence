@@ -48,43 +48,44 @@ function App() {
           </div>
         )}
 
-        {page === 2 && (
-          <div>
-            <div className="page2">{question.title}</div>
-            <div>{question.description}</div>
-            <div>{question.type === 'text' && <Contacts />}</div>
-            <div>
-              {question.type === 'radioimage' && (
-                <div>
-                  {question.options.map((option) => (
-                    <div
-                      onClick={() => {
-                        console.log(option);
-                        answers[questionIndex] = option;
-                        setAnswers([...answers]); /*обновляем массив*/
-                        setQuestionIndex(questionIndex + 1);
-                      }}
-                    >
-                      {option.title}
-                      <img src={option.imageUrl} />
-                    </div>
-                  ))}
-                </div>
-              )}
+{page === 2 && (
+  <div>
+    <div className="page2">{question.title}</div>
+    <div>{question.description}</div>
+    <div>{question.type === 'text' && <Contacts />}</div>
+    <div>
+      {question.type === 'radioimage' && (
+        <div className="options-grid">
+          {question.options.map((option) => (
+            <div
+              className="option-block"
+              onClick={() => {
+                console.log(option);
+                answers[questionIndex] = option;
+                setAnswers([...answers]); /*обновляем массив*/
+                setQuestionIndex(questionIndex + 1);
+              }}
+            >
+              {option.title}
+              <img className="option-image" src={option.imageUrl} />
             </div>
-            {questionIndex > 0 && (
-              <button onClick={() => setQuestionIndex(questionIndex - 1)}>
-                Назад
-              </button>
-            )}
-            {/*Если индекс !=0 то работает кнопка назад, изменяем индекс вопроса на текущее значение -1 */}
-            {questionIndex < questions.length - 1 && (
-              <button onClick={() => setQuestionIndex(questionIndex + 1)}>
-                Далее
-              </button>
-            )}
-          </div>
-        )}
+          ))}
+        </div>
+      )}
+    </div>
+    {questionIndex > 0 && (
+      <button onClick={() => setQuestionIndex(questionIndex - 1)}>
+        Назад
+      </button>
+    )}
+    {/*Если индекс !=0 то работает кнопка назад, изменяем индекс вопроса на текущее значение -1 */}
+    {questionIndex < questions.length - 1 && (
+      <button onClick={() => setQuestionIndex(questionIndex + 1)}>
+        Далее
+      </button>
+    )}
+  </div>
+)}
 
         {page === 3 && (
           <div>
