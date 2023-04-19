@@ -58,16 +58,16 @@ function App() {
         <div className="options-grid">
           {question.options.map((option) => (
             <div
-              className="option-block"
+              className="option-item"
               onClick={() => {
                 console.log(option);
                 answers[questionIndex] = option;
-                setAnswers([...answers]); /*обновляем массив*/
+                setAnswers([...answers]);
                 setQuestionIndex(questionIndex + 1);
               }}
             >
-              {option.title}
               <img className="option-image" src={option.imageUrl} />
+              {option.title}
             </div>
           ))}
         </div>
@@ -78,14 +78,14 @@ function App() {
         Назад
       </button>
     )}
-    {/*Если индекс !=0 то работает кнопка назад, изменяем индекс вопроса на текущее значение -1 */}
     {questionIndex < questions.length - 1 && (
-      <button onClick={() => setQuestionIndex(questionIndex + 1)}>
+      <button className="next-button" onClick={() => setQuestionIndex(questionIndex + 1)}>
         Далее
       </button>
     )}
   </div>
 )}
+
 
         {page === 3 && (
           <div>

@@ -169,4 +169,21 @@
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
   }
+
+  .next-button {
+    background-color: #96a63a;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .next-button:hover {
+    background-color: #74802d;
+  }
   
